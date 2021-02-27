@@ -27,4 +27,10 @@ Cinema.prototype.getFilmsByYear = function(year) {
   })
 }
 
+Cinema.prototype.filterByLength = function(length) {
+  return this.films.every((film) => {
+    return film.length >= length;
+  })
+}
+
 module.exports = Cinema;

@@ -61,7 +61,9 @@ describe('Cinema', function () {
     const actual = cinema.filterByLength(115)
     assert.deepStrictEqual(actual, false)
   });
-  
+
   it('should be able to calculate total running time of all films');
+    const actual = cinema.calculateTotalRunTime(films)
+    assert.deepStrictEqual(actual, 600)
 
 });

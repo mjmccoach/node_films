@@ -33,4 +33,10 @@ Cinema.prototype.filterByLength = function(length) {
   })
 }
 
+Cinema.prototype.calculateTotalRunTime = function() {
+  return this.films.reduce((total, film) => {
+    return total += film.length;
+  }, 0);
+};
+
 module.exports = Cinema;
